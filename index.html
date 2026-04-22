@@ -473,13 +473,8 @@ function gameToggle(btn){
 (function(){
   // Wed 10:00 countdown
   function nextWed10(){
-    const now=new Date();
-    const t=new Date(now);
-    let d=(3-now.getDay()+7)%7;
-    if(d===0){t.setHours(10,0,0,0);if(now>=t)d=7;}
-    t.setDate(t.getDate()+d);
-    t.setHours(10,0,0,0);
-    return t;
+    // Wed 23/4/2025 10:00 already passed - return past date so it unlocks immediately
+    return new Date('2025-04-23T10:00:00');
   }
   // Thu 23:00 countdown  
   function nextThu23(){
@@ -720,13 +715,8 @@ function handleUnauthorized(){
 (function(){
   // Wed 10:00 countdown
   function nextWed10(){
-    const now=new Date();
-    const t=new Date(now);
-    let d=(3-now.getDay()+7)%7;
-    if(d===0){t.setHours(10,0,0,0);if(now>=t)d=7;}
-    t.setDate(t.getDate()+d);
-    t.setHours(10,0,0,0);
-    return t;
+    // Wed 23/4/2025 10:00 already passed - return past date so it unlocks immediately
+    return new Date('2025-04-23T10:00:00');
   }
   // Thu 23:00 countdown  
   function nextThu23(){
